@@ -1,5 +1,5 @@
 import React from 'react';
 
 export default function ParkingList() {
-  return <div>ParkingList</div>;
+  return <div className='list'>ParkingList</div>;
 }

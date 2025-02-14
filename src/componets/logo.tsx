@@ -1,5 +1,5 @@
 import React from 'react';
 
 export default function Logo() {
-  return <div>Logo</div>;
+  return <h1>Far away 🚀</h1>;
 }
