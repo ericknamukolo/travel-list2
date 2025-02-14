@@ -7,7 +7,7 @@ export default function ParkingList({ items }: { items: Item[] }) {
     <div className='list'>
       <ul>
         {items.map((e) => (
-          <PackingItem item={e} />
+          <PackingItem item={e} key={e.id} />
         ))}
       </ul>
     </div>
