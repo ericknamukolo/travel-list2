@@ -22,7 +22,7 @@ export default function App() {
       <Logo />
       <Form onAdd={addItem} />
       <ParkingList items={items} />
-      <Stats />
+      <Stats items={items} />
     </div>
   );
 }
