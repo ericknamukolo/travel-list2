@@ -11,11 +11,15 @@ export default function ParkingList({
 }) {
   return (
     <div className='list'>
-      <ul>
-        {items.map((e) => (
-          <PackingItem item={e} key={e.id} onRemove={onRemove} />
-        ))}
-      </ul>
+      {items.length === 0 ? (
+        <h5>You have no items added</h5>
+      ) : (
+        <ul>
+          {items.map((e) => (
+            <PackingItem item={e} key={e.id} onRemove={onRemove} />
+          ))}
+        </ul>
+      )}
     </div>
   );
 }

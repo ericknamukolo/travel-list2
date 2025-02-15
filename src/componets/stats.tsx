@@ -7,6 +7,7 @@ export default function Stats({ items }: { items: Item[] }) {
   }
 
   function getPercentage(): string {
+    if (items.length === 0) return '0';
     return ((getPacked() / items.length) * 100).toFixed(1);
   }
   return (
