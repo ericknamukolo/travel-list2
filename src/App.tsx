@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Logo from './componets/logo';
 import Form from './componets/form';
 import ParkingList from './componets/packing-list';
@@ -12,11 +12,16 @@ const initialItems: Item[] = [
 ];
 
 export default function App() {
+  const [items, setItems] = useState<Item[]>([...initialItems]);
+
+  function addItem(item: Item) {
+    setItems((prev) => [...prev, item]);
+  }
   return (
     <div className='app'>
       <Logo />
-      <Form />
-      <ParkingList items={initialItems} />
+      <Form onAdd={addItem} />
+      <ParkingList items={items} />
       <Stats />
     </div>
   );
